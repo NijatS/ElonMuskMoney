@@ -22,7 +22,6 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
-
   #root {
     nav {
       background-color: white;
@@ -146,6 +145,7 @@ body {
         }
       }
       .receipt_container {
+        display: none;
         width: 50%;
         margin: 15px auto 65px;
         text-align: center;
@@ -159,7 +159,8 @@ body {
           background-color: rgb(162, 155, 254);
           border-radius: 20px;
           padding: 15px;
-          .receipt_products {
+
+          .receipt_product {
             width: 80%;
             margin: auto;
             h3 {
@@ -192,17 +193,12 @@ body {
           .foot {
             width: 80%;
             margin: auto;
+            display: flex;
             h3 {
+              width: 50%;
+              text-align: center;
               color: white;
               display: inline-block;
-              &:first-child {
-                width: 50%;
-                text-align: center;
-              }
-              &:last-child {
-                width: 50%;
-                text-align: center;
-              }
             }
           }
         }
