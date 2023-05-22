@@ -7,10 +7,11 @@ products.forEach((product) => {
   const sellBtn = product.querySelector(".buySell >button:first-child");
   const value = product.querySelector("span").textContent.split(",").join("");
   const amountProduct = product.querySelector(".buySell >input");
-  let total = Number(totalMoney.textContent.split(",").join(""));
+
   sellBtn.disabled = true;
   buyBtn.addEventListener("click", () => {
     amountProduct.value++;
+    let total = Number(totalMoney.textContent.split(",").join(""));
     // let totalProductMoney = amountProduct.value * value;
     total = total - value;
     totalMoney.textContent = numberWithCommas(total);
@@ -19,6 +20,7 @@ products.forEach((product) => {
     info();
   });
   sellBtn.addEventListener("click", () => {
+    let total = Number(totalMoney.textContent.split(",").join(""));
     amountProduct.value--;
     //let totalProductMoney = amountProduct.value * value;
     total = Number(total) + Number(value);
@@ -29,27 +31,30 @@ products.forEach((product) => {
     }
     info();
   });
+  let eventList = ["change", "keyup"];
+  for (event of eventList) {
+    amountProduct.addEventListener(event, () => {
+      let total = Number(totalMoney.textContent.split(",").join(""));
+      if (amountProduct.value > 0) {
+        sellBtn.disabled = false;
+        sellBtn.style.backgroundColor = "rgb(214, 48, 49)";
+      } else {
+        sellBtn.disabled = true;
+        sellBtn.style.backgroundColor = "rgb(220, 220, 220)";
+      }
 
-  amountProduct.addEventListener("change", () => {
-    if (amountProduct.value > 0) {
-      sellBtn.disabled = false;
-      sellBtn.style.backgroundColor = "rgb(214, 48, 49)";
-    } else {
-      sellBtn.disabled = true;
-      sellBtn.style.backgroundColor = "rgb(220, 220, 220)";
-    }
-    if (amountProduct.value < 0) {
-      amountProduct.value = 0;
-    }
-    totalMoney.textContent = "187,000,000,000";
-    total = Number(totalMoney.textContent.split(",").join(""));
-    const totalProductMoney = amountProduct.value * value;
-    total = Number(total) - Number(totalProductMoney);
-    totalMoney.textContent = numberWithCommas(total);
-    info();
-  });
+      if (amountProduct.value < 0) {
+        amountProduct.value = 0;
+      }
+      totalMoney.textContent = "187,000,000,000";
+      total = Number(totalMoney.textContent.split(",").join(""));
+      const totalProductMoney = amountProduct.value * value;
+      total = Number(total) - Number(totalProductMoney);
+      totalMoney.textContent = numberWithCommas(total);
+      info();
+    });
+  }
 });
-
 function numberWithCommas(data) {
   return data.toLocaleString();
 }
@@ -86,3 +91,11 @@ function info() {
     : (receipt.parentElement.style.display = "block");
   totalAmountReceipt.textContent = "$" + numberWithCommas(total);
 }
+
+/*  if (total < value) {
+    buyBtn.disabled = true;
+    buyBtn.style.backgroundColor = "rgb(220, 220, 220)";
+  } else {
+    buyBtn.disabled = false;
+    buyBtn.style.backgroundColor = "rgb(162, 155, 254)";
+  }*/
