@@ -1,0 +1,155 @@
+body {
+  background-color: #dfe6e9;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body #root nav {
+  background-color: white;
+}
+body #root nav h2 {
+  width: 60%;
+  margin: auto;
+  padding: 25px 0px;
+}
+body #root #main {
+  width: 100%;
+  box-sizing: border-box;
+}
+body #root #main .elonDiv {
+  width: 60%;
+  height: 250px;
+  margin: 15px auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px 15px;
+}
+body #root #main .elonDiv .elonPhoto {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  background-color: rgb(162, 155, 254);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #root #main .elonDiv .elonPhoto img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+body #root #main .elonDiv h1 {
+  color: #a29bfe;
+}
+body #root #main .totalMoney {
+  width: 60%;
+  margin: 0px auto 10px;
+  text-align: center;
+  background-color: rgb(108, 92, 231);
+  padding: 0px 15px;
+  position: sticky;
+  top: 5px;
+  z-index: 999;
+  box-shadow: rgb(108, 92, 231) 0px 25px 20px -15px;
+}
+body #root #main .totalMoney h1 {
+  color: #fff;
+  margin: 0;
+  padding: 15px 0;
+}
+body #root #main .products {
+  width: 60%;
+  text-align: center;
+  margin: auto auto 20px;
+  padding: 0px 15px;
+}
+body #root #main .products .product {
+  width: 280px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  background-color: white;
+  margin: 10px;
+  box-shadow: rgba(120, 120, 120, 0.35) 1.95px 1.95px 2.6px;
+  transition: all 0.2s ease 0s;
+}
+body #root #main .products .product:hover {
+  box-shadow: rgba(120, 120, 120, 0.65) 1.95px 1.95px 12.6px;
+}
+body #root #main .products .product .proPhoto {
+  width: 90%;
+  height: 150px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+body #root #main .products .product .proPhoto img {
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+}
+body #root #main .products .product h3 {
+  padding: 0px;
+}
+body #root #main .products .product h4 {
+  padding: 0px;
+  opacity: 0.6;
+}
+body #root #main .products .product .buySell {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+body #root #main .products .product .buySell button:first-child {
+  border-radius: 2px;
+  color: white;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  width: 30%;
+  padding: 8px 25px;
+  border: none;
+  background-color: rgb(220, 220, 220);
+}
+body #root #main .products .product .buySell button:first-child:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+body #root #main .products .product .buySell button:last-child {
+  border-radius: 2px;
+  color: white;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  width: 30%;
+  padding: 8px 25px;
+  border: none;
+  background-color: rgb(162, 155, 254);
+}
+body #root #main .products .product .buySell button:last-child:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+body #root #main .products .product .buySell input {
+  width: 15%;
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(162, 155, 254);
+  text-align: center;
+  outline-color: rgb(220, 220, 220);
+}
+body #root #main .products .product .buySell input::-webkit-outer-spin-button,
+body #root #main .products .product .buySell input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,150 @@
+@mixin ProductButton($background-color) {
+  border-radius: 2px;
+  color: white;
+  font-weight: 700;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  width: 30%;
+  padding: 8px 25px;
+  border: none;
+  background-color: $background-color;
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+}
+
+body {
+  background-color: #dfe6e9;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+
+  #root {
+    nav {
+      background-color: white;
+      h2 {
+        width: 60%;
+        margin: auto;
+        padding: 25px 0px;
+      }
+    }
+    #main {
+      width: 100%;
+      box-sizing: border-box;
+      .elonDiv {
+        width: 60%;
+        height: 250px;
+        margin: 15px auto;
+        text-align: center;
+        background-color: white;
+        padding: 10px 15px;
+        .elonPhoto {
+          border-radius: 50%;
+          width: 160px;
+          height: 160px;
+          background-color: rgb(162, 155, 254);
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+          }
+        }
+        h1 {
+          color: #a29bfe;
+        }
+      }
+      .totalMoney {
+        width: 60%;
+        margin: 0px auto 10px;
+        text-align: center;
+        background-color: rgb(108, 92, 231);
+        padding: 0px 15px;
+        position: sticky;
+        top: 5px;
+        z-index: 999;
+        box-shadow: rgb(108, 92, 231) 0px 25px 20px -15px;
+        h1 {
+          color: #fff;
+          margin: 0;
+          padding: 15px 0;
+        }
+      }
+      .products {
+        width: 60%;
+        text-align: center;
+        margin: auto auto 20px;
+        padding: 0px 15px;
+        .product {
+          width: 280px;
+          height: fit-content;
+          display: inline-block;
+          text-align: center;
+          padding: 15px;
+          background-color: white;
+          margin: 10px;
+          box-shadow: rgba(120, 120, 120, 0.35) 1.95px 1.95px 2.6px;
+          transition: all 0.2s ease 0s;
+          &:hover {
+            box-shadow: rgba(120, 120, 120, 0.65) 1.95px 1.95px 12.6px;
+          }
+          .proPhoto {
+            width: 90%;
+            height: 150px;
+            text-align: center;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            img {
+              max-height: 90%;
+              max-width: 90%;
+              margin: auto;
+            }
+          }
+          h3 {
+            padding: 0px;
+          }
+          h4 {
+            padding: 0px;
+            opacity: 0.6;
+          }
+          .buySell {
+            width: 95%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            button {
+              &:first-child {
+                @include ProductButton(rgb(220, 220, 220));
+              }
+              &:last-child {
+                @include ProductButton(rgb(162, 155, 254));
+              }
+            }
+            input {
+              width: 15%;
+              padding: 4px 10px;
+              border-radius: 5px;
+              border: 1px solid rgb(162, 155, 254);
+              text-align: center;
+              outline-color: rgb(220, 220, 220);
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
