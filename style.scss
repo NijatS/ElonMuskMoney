@@ -145,6 +145,68 @@ body {
           }
         }
       }
+      .receipt_container {
+        width: 50%;
+        margin: 15px auto 65px;
+        text-align: center;
+        background-color: white;
+        padding: 15px 20px 20px;
+        h2 {
+          margin: 0px;
+        }
+        .receipt {
+          margin-top: 15px;
+          background-color: rgb(162, 155, 254);
+          border-radius: 20px;
+          padding: 15px;
+          .receipt_products {
+            width: 80%;
+            margin: auto;
+            h3 {
+              &:first-child {
+                width: 30%;
+                color: white;
+                display: inline-block;
+                text-align: left;
+              }
+              &:nth-child(2) {
+                width: 30%;
+                color: white;
+                display: inline-block;
+                text-align: center;
+              }
+              &:last-child {
+                width: 30%;
+                color: white;
+                display: inline-block;
+                text-align: right;
+              }
+            }
+          }
+          .border {
+            width: 80%;
+            margin: auto;
+            height: 1px;
+            border-bottom: 1px dashed rgb(255, 255, 255);
+          }
+          .foot {
+            width: 80%;
+            margin: auto;
+            h3 {
+              color: white;
+              display: inline-block;
+              &:first-child {
+                width: 50%;
+                text-align: center;
+              }
+              &:last-child {
+                width: 50%;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
     }
     footer {
       width: 100%;

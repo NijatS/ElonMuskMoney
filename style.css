@@ -153,6 +153,66 @@ body #root #main .products .product .buySell input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+body #root #main .receipt_container {
+  width: 50%;
+  margin: 15px auto 65px;
+  text-align: center;
+  background-color: white;
+  padding: 15px 20px 20px;
+}
+body #root #main .receipt_container h2 {
+  margin: 0px;
+}
+body #root #main .receipt_container .receipt {
+  margin-top: 15px;
+  background-color: rgb(162, 155, 254);
+  border-radius: 20px;
+  padding: 15px;
+}
+body #root #main .receipt_container .receipt .receipt_products {
+  width: 80%;
+  margin: auto;
+}
+body #root #main .receipt_container .receipt .receipt_products h3:first-child {
+  width: 30%;
+  color: white;
+  display: inline-block;
+  text-align: left;
+}
+body #root #main .receipt_container .receipt .receipt_products h3:nth-child(2) {
+  width: 30%;
+  color: white;
+  display: inline-block;
+  text-align: center;
+}
+body #root #main .receipt_container .receipt .receipt_products h3:last-child {
+  width: 30%;
+  color: white;
+  display: inline-block;
+  text-align: right;
+}
+body #root #main .receipt_container .receipt .border {
+  width: 80%;
+  margin: auto;
+  height: 1px;
+  border-bottom: 1px dashed rgb(255, 255, 255);
+}
+body #root #main .receipt_container .receipt .foot {
+  width: 80%;
+  margin: auto;
+}
+body #root #main .receipt_container .receipt .foot h3 {
+  color: white;
+  display: inline-block;
+}
+body #root #main .receipt_container .receipt .foot h3:first-child {
+  width: 50%;
+  text-align: center;
+}
+body #root #main .receipt_container .receipt .foot h3:last-child {
+  width: 50%;
+  text-align: center;
+}
 body #root footer {
   width: 100%;
   background-color: rgba(108, 92, 231, 0.5);
