@@ -146,5 +146,87 @@ body {
         }
       }
     }
+    footer {
+      width: 100%;
+      background-color: rgba(108, 92, 231, 0.5);
+      padding: 5px 0px 50px;
+      margin-top: auto;
+      @media only screen and (max-width: 1100px) {
+        padding: 5px 0px 20px;
+      }
+      @media only screen and (max-width: 800px) {
+        padding: 5px 0px 10px;
+      }
+      .links {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        text-align: center;
+        @media screen and (max-width: 1400px) {
+          width: 60%;
+        }
+        @media screen and (max-width: 1100px) {
+          width: 70%;
+          margin-top: 30px;
+        }
+        @media screen and (max-width: 800px) {
+          width: 80%;
+          margin-top: 20px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 90%;
+          margin-top: 15px;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          img {
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px 0 hsla(0, 0%, 100%, 0.82), 0 2px 16px 0 #fff;
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 40px;
+            margin: 10px;
+            padding: 5px;
+            transition: 0.2s color, box-shadow 1s;
+            height: 1em;
+            width: 1em;
+            box-sizing: initial;
+            @media only screen and (max-width: 800px) {
+              margin: 5px;
+            }
+            @media only screen and (max-width: 600px) {
+              font-size: 35px;
+              margin: 4px;
+            }
+            &:hover {
+              opacity: 1;
+              box-shadow: hsla(0, 0%, 100%, 0.82) 0px 22px 70px 4px;
+            }
+          }
+          &:last-child {
+            display: block;
+            font-size: 1.4rem;
+            margin-top: 15px;
+            color: rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            transition: all 0.2s ease 0s;
+            padding: 5px;
+            text-align: center;
+            @media screen and (max-width: 800px) {
+              margin-top: 10px;
+              font-size: 1.3rem;
+            }
+            @media screen and (max-width: 600px) {
+              font-size: 1.1rem;
+            }
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
