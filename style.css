@@ -26,6 +26,25 @@ body #root #main .elonDiv {
   background-color: white;
   padding: 10px 15px;
 }
+@media only screen and (max-width: 1050px) {
+  body #root #main .elonDiv {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .elonDiv {
+    width: 85%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .elonDiv {
+    width: 95%;
+    padding: 10px 0px;
+  }
+}
 body #root #main .elonDiv .elonPhoto {
   border-radius: 50%;
   width: 160px;
@@ -36,13 +55,30 @@ body #root #main .elonDiv .elonPhoto {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 800px) {
+  body #root #main .elonDiv .elonPhoto {
+    width: 120px;
+    height: 120px;
+  }
+}
 body #root #main .elonDiv .elonPhoto img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
+@media only screen and (max-width: 800px) {
+  body #root #main .elonDiv .elonPhoto img {
+    width: 110px;
+    height: 110px;
+  }
+}
 body #root #main .elonDiv h1 {
   color: #a29bfe;
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .elonDiv h1 {
+    font-size: 24px;
+  }
 }
 body #root #main .totalMoney {
   width: 60%;
@@ -55,16 +91,52 @@ body #root #main .totalMoney {
   z-index: 999;
   box-shadow: rgb(108, 92, 231) 0px 25px 20px -15px;
 }
+@media only screen and (max-width: 1050px) {
+  body #root #main .totalMoney {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .totalMoney {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .totalMoney {
+    width: 95%;
+    padding: 0px;
+  }
+}
 body #root #main .totalMoney h1 {
   color: #fff;
   margin: 0;
   padding: 15px 0;
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .totalMoney h1 {
+    font-size: 24px;
+  }
 }
 body #root #main .products {
   width: 60%;
   text-align: center;
   margin: auto auto 20px;
   padding: 0px 15px;
+}
+@media only screen and (max-width: 1050px) {
+  body #root #main .products {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .products {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .products {
+    width: 95%;
+  }
 }
 body #root #main .products .product {
   width: 280px;
@@ -81,6 +153,22 @@ body #root #main .products .product {
 body #root #main .products .product:hover {
   box-shadow: rgba(120, 120, 120, 0.65) 1.95px 1.95px 12.6px;
 }
+@media only screen and (max-width: 1150px) {
+  body #root #main .products .product {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body #root #main .products .product {
+    width: 220px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body #root #main .products .product {
+    width: 190px;
+    margin: 10px 5px;
+  }
+}
 body #root #main .products .product .proPhoto {
   width: 90%;
   height: 150px;
@@ -88,6 +176,21 @@ body #root #main .products .product .proPhoto {
   margin: auto;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 1150px) {
+  body #root #main .products .product .proPhoto {
+    height: 140px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body #root #main .products .product .proPhoto {
+    height: 130px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body #root #main .products .product .proPhoto {
+    width: 120px;
+  }
 }
 body #root #main .products .product .proPhoto img {
   max-height: 90%;
@@ -124,6 +227,21 @@ body #root #main .products .product .buySell button:first-child:hover {
   transform: translateY(-1px);
   opacity: 0.9;
 }
+@media only screen and (max-width: 1150px) {
+  body #root #main .products .product .buySell button:first-child {
+    padding: 8px 20px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body #root #main .products .product .buySell button:first-child {
+    padding: 8px 10px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body #root #main .products .product .buySell button:first-child {
+    padding: 8px 5px;
+  }
+}
 body #root #main .products .product .buySell button:last-child {
   border-radius: 2px;
   color: white;
@@ -139,6 +257,21 @@ body #root #main .products .product .buySell button:last-child {
 body #root #main .products .product .buySell button:last-child:hover {
   transform: translateY(-1px);
   opacity: 0.9;
+}
+@media only screen and (max-width: 1150px) {
+  body #root #main .products .product .buySell button:last-child {
+    padding: 8px 20px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  body #root #main .products .product .buySell button:last-child {
+    padding: 8px 10px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body #root #main .products .product .buySell button:last-child {
+    padding: 8px 5px;
+  }
 }
 body #root #main .products .product .buySell input {
   width: 15%;
@@ -161,6 +294,30 @@ body #root #main .receipt_container {
   background-color: white;
   padding: 15px 20px 20px;
 }
+@media only screen and (max-width: 1450px) {
+  body #root #main .receipt_container {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  body #root #main .receipt_container {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .receipt_container {
+    width: 85%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 15px 10px 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .receipt_container {
+    width: 90%;
+    padding: 15px 7px 20px;
+  }
+}
 body #root #main .receipt_container h2 {
   margin: 0px;
 }
@@ -170,9 +327,29 @@ body #root #main .receipt_container .receipt {
   border-radius: 20px;
   padding: 15px;
 }
+@media only screen and (max-width: 800px) {
+  body #root #main .receipt_container .receipt {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .receipt_container .receipt {
+    padding: 8px;
+  }
+}
 body #root #main .receipt_container .receipt .receipt_product {
   width: 80%;
   margin: auto;
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .receipt_container .receipt .receipt_product h3 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .receipt_container .receipt .receipt_product h3 {
+    font-size: 14px;
+  }
 }
 body #root #main .receipt_container .receipt .receipt_product h3:first-child {
   width: 30%;
@@ -208,6 +385,16 @@ body #root #main .receipt_container .receipt .foot h3 {
   text-align: center;
   color: white;
   display: inline-block;
+}
+@media only screen and (max-width: 800px) {
+  body #root #main .receipt_container .receipt .foot h3 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root #main .receipt_container .receipt .foot h3 {
+    font-size: 14px;
+  }
 }
 body #root footer {
   width: 100%;

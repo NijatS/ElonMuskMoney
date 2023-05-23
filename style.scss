@@ -13,6 +13,15 @@
     transform: translateY(-1px);
     opacity: 0.9;
   }
+  @media only screen and (max-width: 1150px) {
+    padding: 8px 20px;
+  }
+  @media only screen and (max-width: 900px) {
+    padding: 8px 10px;
+  }
+  @media only screen and (max-width: 700px) {
+    padding: 8px 5px;
+  }
 }
 
 body {
@@ -22,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
+
   #root {
     nav {
       background-color: white;
@@ -41,6 +51,18 @@ body {
         text-align: center;
         background-color: white;
         padding: 10px 15px;
+        @media only screen and (max-width: 1050px) {
+          width: 75%;
+        }
+        @media only screen and (max-width: 800px) {
+          width: 85%;
+          height: fit-content;
+          padding-bottom: 20px;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 95%;
+          padding: 10px 0px;
+        }
         .elonPhoto {
           border-radius: 50%;
           width: 160px;
@@ -50,14 +72,25 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
+          @media only screen and (max-width: 800px) {
+            width: 120px;
+            height: 120px;
+          }
           img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            @media only screen and (max-width: 800px) {
+              width: 110px;
+              height: 110px;
+            }
           }
         }
         h1 {
           color: #a29bfe;
+          @media only screen and (max-width: 800px) {
+            font-size: 24px;
+          }
         }
       }
       .totalMoney {
@@ -70,10 +103,23 @@ body {
         top: 5px;
         z-index: 999;
         box-shadow: rgb(108, 92, 231) 0px 25px 20px -15px;
+        @media only screen and (max-width: 1050px) {
+          width: 75%;
+        }
+        @media only screen and (max-width: 800px) {
+          width: 85%;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 95%;
+          padding: 0px;
+        }
         h1 {
           color: #fff;
           margin: 0;
           padding: 15px 0;
+          @media only screen and (max-width: 800px) {
+            font-size: 24px;
+          }
         }
       }
       .products {
@@ -81,6 +127,15 @@ body {
         text-align: center;
         margin: auto auto 20px;
         padding: 0px 15px;
+        @media only screen and (max-width: 1050px) {
+          width: 75%;
+        }
+        @media only screen and (max-width: 800px) {
+          width: 85%;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 95%;
+        }
         .product {
           width: 280px;
           height: fit-content;
@@ -94,6 +149,16 @@ body {
           &:hover {
             box-shadow: rgba(120, 120, 120, 0.65) 1.95px 1.95px 12.6px;
           }
+          @media only screen and (max-width: 1150px) {
+            width: 250px;
+          }
+          @media only screen and (max-width: 900px) {
+            width: 220px;
+          }
+          @media only screen and (max-width: 700px) {
+            width: 190px;
+            margin: 10px 5px;
+          }
           .proPhoto {
             width: 90%;
             height: 150px;
@@ -101,6 +166,15 @@ body {
             margin: auto;
             display: flex;
             justify-content: center;
+            @media only screen and (max-width: 1150px) {
+              height: 140px;
+            }
+            @media only screen and (max-width: 900px) {
+              height: 130px;
+            }
+            @media only screen and (max-width: 700px) {
+              width: 120px;
+            }
             img {
               max-height: 90%;
               max-width: 90%;
@@ -151,6 +225,22 @@ body {
         text-align: center;
         background-color: white;
         padding: 15px 20px 20px;
+        @media only screen and (max-width: 1450px) {
+          width: 65%;
+        }
+        @media only screen and (max-width: 1050px) {
+          width: 75%;
+        }
+        @media only screen and (max-width: 800px) {
+          width: 85%;
+          height: fit-content;
+          padding: 15px 10px 20px;
+        }
+        @media only screen and (max-width: 600px) {
+          width: 90%;
+          padding: 15px 7px 20px;
+        }
+
         h2 {
           margin: 0px;
         }
@@ -159,11 +249,22 @@ body {
           background-color: rgb(162, 155, 254);
           border-radius: 20px;
           padding: 15px;
-
+          @media only screen and (max-width: 800px) {
+            padding: 10px;
+          }
+          @media only screen and (max-width: 600px) {
+            padding: 8px;
+          }
           .receipt_product {
             width: 80%;
             margin: auto;
             h3 {
+              @media only screen and (max-width: 800px) {
+                font-size: 15px;
+              }
+              @media only screen and (max-width: 600px) {
+                font-size: 14px;
+              }
               &:first-child {
                 width: 30%;
                 color: white;
@@ -199,6 +300,12 @@ body {
               text-align: center;
               color: white;
               display: inline-block;
+              @media only screen and (max-width: 800px) {
+                font-size: 15px;
+              }
+              @media only screen and (max-width: 600px) {
+                font-size: 14px;
+              }
             }
           }
         }
