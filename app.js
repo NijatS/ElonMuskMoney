@@ -1,8 +1,10 @@
 const totalMoney = document.querySelector(".totalMoney >h1 >span");
 const products = document.querySelectorAll(".product");
 const receipt = document.querySelector(".receipt");
-const buyBtns = document.querySelectorAll(".buySell >button:last-child");
+let total = Number(totalMoney.textContent.split(",").join(""));
+
 const totalMoneyC = 187000000000;
+let buyBtns = [];
 
 products.forEach((product) => {
   const buyBtn = product.querySelector(".buySell >button:last-child");
@@ -11,28 +13,39 @@ products.forEach((product) => {
   const amountProduct = product.querySelector(".buySell >input");
 
   sellBtn.disabled = true;
-  buyBtn.addEventListener("click", () => {
+
+  document.body.addEventListener("click", () => {
+    /* if (amountProduct.value * value >= total) {
+      amountProduct.value = Math.trunc(total / value);
+    }*/
     EnableButton();
+
+    if (total <= value) {
+      buyBtns.push(buyBtn);
+      buyBtns.forEach((button) => {
+        button.disabled = true;
+        button.style.backgroundColor = "rgb(220, 220, 220)";
+      });
+    } else {
+      buyBtns = [];
+    }
+    console.log(buyBtns);
+  });
+  buyBtn.addEventListener("click", () => {
+    console.log("buy");
+    // EnableButton();
     amountProduct.value++;
-    let total = Number(totalMoney.textContent.split(",").join(""));
-    total = total - value;
+    total -= value;
     totalMoney.textContent = numberWithCommas(total);
     sellBtn.disabled = false;
     sellBtn.style.backgroundColor = "rgb(214, 48, 49)";
-    if (total < value) {
-      buyBtns.forEach((button) => {
-        button.disabled = true;
-        amountProduct.value = Math.trunc(totalMoneyC / value);
-        button.style.backgroundColor = "rgb(220, 220, 220)";
-      });
-    }
     info();
   });
   sellBtn.addEventListener("click", () => {
-    EnableButton();
-    let total = Number(totalMoney.textContent.split(",").join(""));
+    console.log("sell");
+    //  EnableButton();
     amountProduct.value--;
-    total = Number(total) + Number(value);
+    total += Number(value);
     totalMoney.textContent = numberWithCommas(total);
     if (amountProduct.value == 0) {
       sellBtn.disabled = true;
@@ -40,11 +53,11 @@ products.forEach((product) => {
     }
     info();
   });
-  let eventList = ["change", "keyup"];
+  /*let eventList = ["change", "keyup"];
   for (event of eventList) {
     amountProduct.addEventListener(event, () => {
-      EnableButton();
-      let total = Number(totalMoney.textContent.split(",").join(""));
+      //  EnableButton();
+      //let total = Number(totalMoney.textContent.split(",").join(""));
       if (amountProduct.value > 0) {
         sellBtn.disabled = false;
         sellBtn.style.backgroundColor = "rgb(214, 48, 49)";
@@ -59,25 +72,29 @@ products.forEach((product) => {
         buyBtns.forEach((button) => {
           button.disabled = true;
           button.style.backgroundColor = "rgb(220, 220, 220)";
-          amountProduct.value = Math.trunc(totalMoneyC / value);
+          // amountProduct.value = Math.trunc(totalMoneyC / value);
         });
       }
-      totalMoney.textContent = "187,000,000,000";
-      total = Number(totalMoney.textContent.split(",").join(""));
+      //totalMoney.textContent = "187,000,000,000";
+      // total = Number(totalMoney.textContent.split(",").join(""));
       const totalProductMoney = amountProduct.value * value;
+      if (amountProduct.value * value > total) {
+        amountProduct.value = Math.trunc(total / value);
+      }
       total = Number(total) - Number(totalProductMoney);
       totalMoney.textContent = numberWithCommas(total);
       info();
     });
-  }
+    return;
+  }*/
 });
 function numberWithCommas(data) {
   return data.toLocaleString();
 }
-function formatAmount() {
-  totalMoney.textContent = "187,000,000,000";
-  total = Number(totalMoney.textContent.split(",").join(""));
-}
+// function formatAmount() {
+//   totalMoney.textContent = "187,000,000,000";
+//   total = Number(totalMoney.textContent.split(",").join(""));
+// }
 function info() {
   const receiptProduct = document.querySelectorAll(".receipt_product");
   const totalAmountReceipt = document.querySelector(".totalAmount");
