@@ -3,7 +3,6 @@ const products = document.querySelectorAll(".product");
 const receipt = document.querySelector(".receipt");
 let total = Number(totalMoney.textContent.split(",").join(""));
 
-const totalMoneyC = 187000000000;
 let buyBtns = [];
 
 products.forEach((product) => {
@@ -53,7 +52,6 @@ products.forEach((product) => {
   });
 
   amountProduct.addEventListener("keyup", () => {
-    console.log("say" + say);
     total += say * value;
     if (amountProduct.value > 0) {
       sellBtn.disabled = false;
@@ -85,6 +83,16 @@ products.forEach((product) => {
   amountProduct.addEventListener("keydown", (e) => {
     if (e.which === 38 || e.which === 40) {
       e.preventDefault();
+    }
+  });
+  amountProduct.addEventListener("focus", () => {
+    if (amountProduct.value == 0) {
+      amountProduct.value = "";
+    }
+  });
+  amountProduct.addEventListener("blur", () => {
+    if (amountProduct.value == "") {
+      amountProduct.value = 0;
     }
   });
 });
