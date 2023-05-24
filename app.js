@@ -73,7 +73,6 @@ products.forEach((product) => {
     if (amountProduct.value == 0) {
       sellBtn.disabled = true;
       sellBtn.style.backgroundColor = "rgb(220, 220, 220)";
-      deyer = 0;
     }
     total -= Number(totalProductMoney);
     totalMoney.textContent = numberWithCommas(total);
